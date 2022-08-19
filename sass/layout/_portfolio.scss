@@ -56,8 +56,7 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
-}
-
-.portfolio__items:hover .portfolio-top-text {
-  transform: translateY(0%);
+  .portfolio__items:hover & {
+    transform: translateY(0%);
+  }
 }

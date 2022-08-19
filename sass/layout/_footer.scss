@@ -2,6 +2,16 @@
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
+  .container {
+    display: flex;
+  }
+  .footer-soc__item {
+    display: flex;
+    gap: 10px;
+  }
+  span {
+    color: #ffffff;
+  }
 }
 
 .footer__logo {
@@ -15,10 +25,6 @@
   margin-bottom: 20px;
 }
 
-.footer span {
-  color: #ffffff;
-}
-
 .address__link {
   font-size: 14px;
   font-style: normal;
@@ -29,10 +35,13 @@
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
-.address__mail,
-.address__tel {
+.address__connect {
   font-size: 14px;
   font-style: normal;
   line-height: 1.71;
@@ -42,19 +51,14 @@
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .address__item:not(:last-child) {
   margin-bottom: 9px;
-}
-
-.address__link:hover,
-.address__link:focus,
-.address__mail:hover,
-.address__mail:focus,
-.address__tel:hover,
-.address__tel:focus {
-  color: var(--accent-color);
 }
 
 .footer-soc__title {
@@ -68,14 +72,6 @@
   margin-bottom: 20px;
 }
 
-.footer .container {
-  display: flex;
-}
-
-.footer-soc__item {
-  display: flex;
-  gap: 10px;
-}
 .footer-soc-wrap {
   margin-left: 70px;
   margin-right: 93px;
@@ -96,9 +92,8 @@
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer-soc__link:hover,
-.footer-soc__link:focus {
-  background-color: var(--accent-color);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
 }

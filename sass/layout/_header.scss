@@ -1,6 +1,9 @@
-.header > .container {
-  display: flex;
-  align-items: center;
+.header {
+  border-bottom: 1px solid #ececec;
+  > .container {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .navigation {
@@ -16,12 +19,6 @@
   margin-right: 50px;
 }
 
-.contacts {
-  display: flex;
-  gap: 50px;
-  margin-left: auto;
-}
-
 .navigation__logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -32,10 +29,9 @@
   margin-right: 93px;
   padding-top: 25px;
   padding-bottom: 25px;
-}
-
-.navigation__logo span {
-  color: #000000;
+  span {
+    color: #000000;
+  }
 }
 
 .navigation__link {
@@ -47,11 +43,16 @@
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
-.navigation__link:hover,
-.navigation__link:focus {
-  color: var(--accent-color);
+.contacts {
+  display: flex;
+  gap: 50px;
+  margin-left: auto;
 }
 
 .contacts__link {
@@ -65,15 +66,10 @@
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.contacts__link:hover,
-.contacts__link:focus {
-  color: var(--accent-color);
-}
-
-.header {
-  border-bottom: 1px solid #ececec;
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .contacts__icon {
@@ -82,24 +78,23 @@
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.contacts__link:hover .contacts__icon,
-.contacts__link:focus .contacts__icon {
-  fill: var(--accent-color);
+  .contacts__link:hover &,
+  .contacts__link:focus & {
+    fill: var(--accent-color);
+  }
 }
 
 .current {
   position: relative;
   color: var(--accent-color);
-}
-
-.current::after {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 4px;
-  background: #2196f3;
-  border-radius: 2px;
-  left: 0;
-  bottom: -32px;
+  &::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: #2196f3;
+    border-radius: 2px;
+    left: 0;
+    bottom: -32px;
+  }
 }
