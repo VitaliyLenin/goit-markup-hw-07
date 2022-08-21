@@ -131,10 +131,6 @@
       background-color: var(--accent-color);
       border: none;
     }
-    .modal-check:focus + & {
-      background-color: var(--accent-color);
-      border: none;
-    }
   }
 }
 

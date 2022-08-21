@@ -637,10 +637,6 @@ img {
   background-color: var(--accent-color);
   border: none;
 }
-.modal-check:focus + .check-text span {
-  background-color: var(--accent-color);
-  border: none;
-}
 
 .check-icon {
   opacity: 0;
